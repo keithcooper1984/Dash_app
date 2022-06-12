@@ -187,6 +187,7 @@ def kpi_gauge(in_value, target, title):
 # Dash Layout
 
 app = dash.Dash(__name__)
+server = app.server
 
 app.config.suppress_callback_exceptions = True
 
@@ -303,4 +304,4 @@ def kpi_graphs(month):
 ###################################################################################
 # Run App
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=False)
